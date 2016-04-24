@@ -1,0 +1,47 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+
+<dom-module id="eet-venue">
+  <template>
+
+    <style>
+      paper-card {
+        width: 100%;
+      }
+    </style>
+
+    <iron-ajax
+      auto
+      url="https://api.eet.nu/venues/{{venueId}}"
+      handle-as="json"
+      last-response="{{venue}}"></iron-ajax>
+
+    <paper-card image="{{venue.images.original}}">
+      <div class="card-content">
+        <div class="cafe-header">
+          <h1>{{venue.name}}</h1>
+        </div>
+        <p>{{venue.category}}</p>
+        <p class="cafe-light">{{venue.description}}</p>
+      </div>
+    </paper-card>
+
+    </paper-card>
+
+  </template>
+
+  <script>
+  Polymer({
+    is: 'eet-venue',
+    properties: {
+      venueId: Number
+    }
+  });
+  </script>
+
+</dom-module>
+
+
+
