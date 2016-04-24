@@ -5,6 +5,15 @@ It is a simple webcomponent to retrieve venue data from the Eet.nu API (http://a
 
 ## Usage
 
-1. Include the line '''<link rel="import" href="eet-venue.html">''' to your html
-2. Include the tag '''<eet-venue venue-id="511"></eet-venue>''' to your html
+1. Include the following to your html
+```
+<link rel="import" href="eet-venue.html">
+```
+2. Include the following tag to your html
+```
+<eet-venue venue-id="551"></eet-venue>
+```
 3. Enjoy!
+
+
+
